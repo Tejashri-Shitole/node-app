@@ -66,6 +66,7 @@ app.put("/update", async (request, response)=>{
 
 // To delete the resource using particular field 
 // http://localhost:8080/delete/request_param
+// http://localhost:8084/delete/request_param
 app.delete("/delete/:mrk", async (request, response)=>{
     const mrk = request.params.mrk;
     const deletedStudent = await Student.findOneAndDelete({marks:mrk})
